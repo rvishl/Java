@@ -37,6 +37,7 @@
         - int []a, b; //a and b both are Integer type array. ✔
         - int a[], b; // a is array but b is simple Integer variable. ✔
         - int a, b[]; // a is normal variable and b is array.
+        - int a, []b; // a is Integer type array but b is not a array and when we compile then it throw error.
         - int a[], b[]; // a and b both are array.
         - int []a, b[]; // a and b both are array.
         
@@ -74,3 +75,76 @@
     - Arrays are stored in "HEAP Area" 
     - Difference between declaring, creating and initializing an array with and without  using new keyword.
         - When we create an array without using new keyword then default value will not be initialized in the array, all the values will be initlized automatically in the array.
+
+## Multi-Dimension Array (Array of an Array).
+- If an array has multiple row and multiple columns then it is known as multi-dimensional array.
+- Types of Multi-Dimensional array:
+    - 2D Array
+        - Diagram representation
+        - Following points for 2D Array
+            - Declaration
+                - For declaring 2D array, we have to use double square braces
+                - int[][] a; // Prefered way
+                  int [][]a;
+                  int[][]a;
+                  int [][] a;
+                  int []a[];
+                - Cases for Declaration :
+                    - int []a, b; // a is 2D array; b is 2D array;
+                    - int a[][], b; // a is 2D array, b is simple Integer variable;
+                    - int []a[], b; // a is 2D array; And b is 1D array;
+                    - int []a[], b[]; // Both are 2D array
+                    - int [][]a, b[]; // a is 2D array, But b is 3D array
+                    - int [][]a, []b; // compile time error
+
+            - Creation
+                - When we create 2D array, we have to provide the size of an array.
+                - a = new int[2][3]; // there are 2 rows and 3 columns.
+                - Cases for creation:
+                    - a = new[2][3]; // correct
+                    - a = new int[][] // compile time error (array dimension missing)
+                    - a = new int[2][]; // correct (Jagged array)
+                    - a = new int [][3]; // compile time error
+                - We can declare and create 2D array in a single line.
+                - Example: 
+                    - int [][] a = new int[2][3]; //correct
+                    - int[][] a = new int[2][]; // correct
+                    - int [][] a = new int[][]; // error
+                    - int [][] a = new int[0][0]; // correct
+                    - int [][] a = new int[-2][3]; // will be compile succeesfully and it throw run time error that is NegativeArraySizeException.
+            - Initialization
+                - int [][] a = {{10, 20, 30}, {40, 50, 60}};
+            - Retrieve
+    - 3D Array
+    - 4D, 5D, 6D... Array
+    - Zic-Zac Array (Jagged Array)
+
+    - Example:
+        - class TwoDArrat() {
+            public static void main(String[] args) {
+                //TwoDArray ob=new TwoDArray();
+                //System.out.println(ob);
+                // Output: <package_name>.TwoDArray@<Unique_Id>
+
+                //int [] a = {10, 20, 30, 40};
+                // System.out.println(a); 
+                //[I@659e0bfd  => [ : Single dimensional array; I : Integer : <Unique_id>
+                
+
+                // int [][] a = {{10, 20, 30}, {40, 50, 60}};
+                //System.out.println(a); 
+                // Output: [[I@659e0bfd  => [[ : 2D array : Integer : <unique_id>
+                //System.out.println(a[0]);
+                //Output: [I@2a139a55 => [ : 1D array : @ : <unique_id-Hexa_decimal_value>
+
+                //System.out.println(a[0][0]);
+                //Output: 10;
+
+                //System.out.println(a[0][0][0]); compilation error
+
+
+                //System.out.println(a.length);  //Output: 2
+                //System.out.println(a[0].length); // Output: 3
+                //System.out.println(a[0][0].length); // error
+            }
+        }
