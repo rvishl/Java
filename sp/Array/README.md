@@ -79,7 +79,8 @@
 ## Multi-Dimension Array (Array of an Array).
 - If an array has multiple row and multiple columns then it is known as multi-dimensional array.
 - Types of Multi-Dimensional array:
-    - 2D Array
+
+    - 2D Array (Matrix array or Jagged array)
         - Diagram representation
         - Following points for 2D Array
             - Declaration
@@ -115,7 +116,7 @@
             - Initialization
                 - int [][] a = {{10, 20, 30}, {40, 50, 60}};
             - Retrieve
-    - 3D Array
+    - 3D Array (Matrix array or Jagged array)
         - Diagram Representation
         - How to declare, create and initialize 3D array:
             - Declaration: 
@@ -167,7 +168,6 @@
 
 
     - 4D, 5D, 6D... Array
-    - Zic-Zac Array (Jagged Array)
 
 <img src="./array_1_2_3D.jpg" />
 
@@ -201,3 +201,106 @@
                 //System.out.println(a[0][0].length); // error
             }
         }
+
+
+
+## Multi-Dimensional Array:
+- Multi-Dimensional array can be matrix array or jagged array.
+- Matrix array - The array in which there is fixed number of rows & columns.
+- Jagged array - The array in which number of columns can be changed.
+
+    - Example:
+        - class multiDimension {
+            public static void main(String[] args) {
+                // int [][] a = new int[3][];
+                <!-- a[0] = new int[4];
+                a[1] = new int[3];
+                a[2] = new int[5];
+
+                a[0][0] = 10; -->
+
+                int [][] a = {{10, 20, 30, 40}, {50, 60, 70}, {80, 90, 100, 200, 300}};
+                
+                for (int i=0; i<a.length; i++) {
+                    for (int j=0; j<a[i].length; j++) {
+                        System.out.print(a[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+
+
+## Note: (Way of initilazation)
+- way1 - 
+    - int [][] a = new int[2][3];
+    a[0][0] = 10;
+- way2 - 
+    - int [][] a = {{10, 20, 30}, {40, 50, 60}};
+
+- way3 - 
+    - int [][] a = new int[][] {{10, 20, 30}, {40, 50, 60}};
+
+## Anonymous Array:
+- An array that does not have any name is known as Anonymous Array
+- For Example:
+    - new int[] {10, 20, 30, 40};
+- Use : Anonymous arrays are created when we want to use them instantly or only for one time.
+- Anonymous arrays are created in the method signature.
+- Anonymous arrays are used as an argument in the method.
+- It can be single dimensional or multi-dimensional array.
+- Example:
+    - class AnonymousArray {
+        public static void main(String[] args) {
+            int [] arr = {10, 20, 30};
+            AnonymousArray.sum(new int[] {10, 20, 30});
+        }
+
+        static void sum (int[] a) {
+            int sum=0;
+            for (int i=0; i<a.length; i++) {
+                sum += a[i];
+            }
+            System.out.println("Sum of array is : " +sum);
+        }
+    }
+
+
+## Different way of printing array elements
+- way 1: for loop
+    - int a[] = {10, 20, 30}; 
+      // forward direction
+      for (int i=0; i<a.length; i++) {
+        System.out.println(a[i]);
+      }
+
+      // backward direction
+      for (int i = a.length-1; i>=0; i--) {
+        System.out.println(a[i]);
+      }
+
+
+- way 2: while loop
+    - int a[] = {10, 20, 30};
+      int j=0;
+      while(j<a.length) {
+        System.out.println(a[i]);
+        j++;
+      }
+
+- way 3: for each loop
+    - int a[] = {10, 20, 30};
+      for (int k : a) {
+        System.out.println(k);
+      }
+
+    - String str = {"Ajeet", "Ritesh", "Shubham", "sunny"};
+      for (String s : str) {
+        System.out.println(s);
+      }
+
+## Limitations of for-each loop:
+- It does not track the index position of an array.
+- It only iterates the elements in forward direction.
+
+
