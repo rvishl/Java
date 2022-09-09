@@ -134,8 +134,36 @@
 
             - Creation:
                 - We can create an array by using new keyword. 
+                - Cases for creations:
+                    - a = new int[2][2][3]; ✔
+                    - a = new int[2][2][]; ✔
+                    - a = new int[2][][]; ✔
+                    - a = new int[][][]; ❌(Compile time error)
+                    - a = new int[2][][3]; ❌ (Compile time error)
             - Initialization:
                 - a[0][1][2] = 100;
+                - int[][][] a = {{{10, 20, 30}, {40, 50, 60}}, {{70, 80, 90}, {100, 200, 300}}}
+                
+                - System.out.println(a); // [[[I@659e0bfd = [[[ - 3D : I - Integer : @ : <hexadecimalvalue>
+                - System.out.println(a[1]); // [[I@<hexadecimalvalue>
+                - System.out.println(a[0][0]); // [I@<hexadecimalvalue>
+
+                - System.out.println(a.length); // ✔ Output: 2
+                - System.out.println(a[0].length); // ✔ Output: 2
+                - System.out.println(a[0][0].length); // ✔ Output: 3
+                - System.out.prinln(a[0][0][0].length); ❌ error
+                - System.out.println(a[0][2].length); ❌ error (ArrayIndexOutOfBounce) 
+            
+            - Retrieve:
+                - We can retrieve the elements of 3D array by using 3 for loops
+                - for (int i=0; i<a.length; i++) {
+                    for (int j=0; j<a[i].length; j++) {
+                        for (int k=0; k<a[i][j]; k++) {
+                            System.out.println(a[i][j][k]);
+                        }
+                    }
+                }
+            
 
 
     - 4D, 5D, 6D... Array
@@ -144,7 +172,7 @@
 <img src="./array_1_2_3D.jpg" />
 
 
-##  Example:
+##  Example: 
         - class TwoDArrat() {
             public static void main(String[] args) {
                 //TwoDArray ob=new TwoDArray();
