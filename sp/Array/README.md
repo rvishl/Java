@@ -116,10 +116,35 @@
                 - int [][] a = {{10, 20, 30}, {40, 50, 60}};
             - Retrieve
     - 3D Array
+        - Diagram Representation
+        - How to declare, create and initialize 3D array:
+            - Declaration: 
+                - We can declare 3D array by using 3 square braces.
+                - int[][][] a;
+                  int[] [][]a;
+                  int [][][]a;
+                  int []a[][];
+                  int a[][][];
+                  a = new int[2][2][2];
+                - Cases for Declaration:
+                    - int[][][]a, b; //a & b are 3D array
+                    - int [][]a[], b; // a is 3D array & b is 2D array;
+                    - int [][]a[], b[]; // a & b is 3D array;
+                    - int [][][]a, []b; // compile time error
+
+            - Creation:
+                - We can create an array by using new keyword. 
+            - Initialization:
+                - a[0][1][2] = 100;
+
+
     - 4D, 5D, 6D... Array
     - Zic-Zac Array (Jagged Array)
 
-    - Example:
+<img src="./array_1_2_3D.jpg" />
+
+
+##  Example:
         - class TwoDArrat() {
             public static void main(String[] args) {
                 //TwoDArray ob=new TwoDArray();
