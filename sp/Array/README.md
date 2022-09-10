@@ -304,3 +304,10 @@
 - It only iterates the elements in forward direction.
 
 
+### Sorting:
+- Bubble sort:
+- Selection sort:
+- Insertion sort:
+- Merge sort:
+- Quick sort:
+- Heap sort:
