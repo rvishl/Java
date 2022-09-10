@@ -38,7 +38,7 @@
 
 }*/
 
-class array {
+/*class array {
 
     static int stringSort(String[] s) {
 
@@ -70,5 +70,32 @@ class array {
         String [] s = {"Ritesh", "Ajeet", "Shubham", "Sunny", "Sumit", "Rauvin", "Manish", "Satyam", "Raja", "Gajendra", "Kamran", "Ashish", "Akshay", "Samir", "Vishal"};
         stringSort(s);
 
+    }
+}*/
+
+class java {
+
+    static void minEle(int[] a) {
+        int ct = a[0];
+        for (int i=0; i<a.length; i++) {
+            if (a[i] < ct) 
+                ct = a[i];
+        }
+        System.out.println("Minimum Element: " + ct);
+    }
+
+    static void maxEle(int[] a) {
+        int ct = a[0];
+        for (int i=0; i<a.length; i++) {
+            if(a[i] > ct)
+                ct = a[i];
+        }
+        System.out.println("Maximun Element: " + ct);
+    }
+
+    public static void main(String[] args) {
+        int [] a = { 40, 20, 50, 60, 10, 70, 30, 90, 80};
+        minEle(a);
+        maxEle(a);
     }
 }
