@@ -332,8 +332,12 @@
 - Heap sort:
 
 ## QQQQQQ
-
+- Write a program to find the maximum and minimum element in an array.
+- Write a program to find the second largest element in an array.
 - Write a program to find the duplicate element in an array.
 - Write a program to find the first duplicate element in an array.
 - Write a program to check how many even and odd numbers are there in an array.
 - Write a program to find the common elements in 2 array.
+- Write a program to find the common elements in 2 arrays.
+
+- Write a program to delete an element in an array at specific position.
