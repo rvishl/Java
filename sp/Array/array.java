@@ -247,7 +247,7 @@
         insertion(arr, newElement, pos);
     }
 }*/
-
+/*
 class array {
     static void insertion(int[] a, int b, int pos) {
         int[] newArray = new int[a.length+1];
@@ -274,4 +274,4 @@ class array {
         int newElement = 25;
         insertion(arr, newElement, pos);
     }
-}
+}*/
