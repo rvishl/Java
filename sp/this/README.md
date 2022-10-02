@@ -85,4 +85,33 @@ class Main {
     }
 }
 
-12:00
+- 5:
+
+class main1 {
+    main1(Main mm) {
+        System.out.print("constructro");
+    }
+}
+class Main {
+
+    void demo() {
+        main1 m1 = new main1(this);
+    }
+
+    public static void main(String[] args) {
+        Main m = new Main();
+        m.demo();
+    }
+}
+
+- 6:
+class Main {
+
+    Main show() {
+        return this;
+    }
+    public static void main(String[] args) {
+        Main m = new Main();
+        m.show();
+    }
+}
