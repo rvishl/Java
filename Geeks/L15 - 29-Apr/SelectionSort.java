@@ -20,11 +20,23 @@ class SelectionSort {
         array[j] = ((array[i]+array[j] - (array[i]=array[j])));
     }
 
+    // static void selectionSort(int[] array, int size) {
+    //     for(int i=size-1; i>1; i--) {
+    //         int idx=0;
+    //         for(int j=0; j<=i; j++) {
+    //             if(array[j] > array[idx]) {
+    //                 idx = j;
+    //             }
+    //         }
+    //         swap(array, i, idx);
+    //     }
+    // }
+
     static void selectionSort(int[] array, int size) {
-        for(int i=size-1; i>0; i--) {
-            int idx=0;
-            for(int j=0; j<=i; j++) {
-                if(array[j] > array[idx]) {
+        for(int i=0; i<size-1; i++) {
+            int idx=size-1;
+            for(int j=i+1; j<size; j++) {
+                if(array[j] < array[idx]) {
                     idx = j;
                 }
             }
